@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 // Import project images from assets folder
 import bdhpImg from '../../assets/bdhp.jpg';
@@ -15,7 +15,6 @@ interface Project {
   image: string;
   tags: string[];
   githubUrl: string;
-  demoUrl: string;
 }
 
 const ProjectsSection: React.FC = () => {
@@ -60,7 +59,6 @@ const ProjectsSection: React.FC = () => {
       image: bdhpImg,
       tags: ['Python', 'Machine Learning Models', 'TensorFlow', 'Data Analysis'],
       githubUrl: 'https://github.com/raian-khan/BD-home-prices',
-      demoUrl: '#',
     },
     {
       title: 'Tomato Disease Classification',
@@ -69,7 +67,6 @@ const ProjectsSection: React.FC = () => {
       image: potatoImg,
       tags: ['Python', 'CNN', 'TensorFlow', 'Keras'],
       githubUrl: 'https://github.com/raian-khan/tomato-disease-CNN',
-      demoUrl: '#',
     },
     {
       title: 'FoodOrdery',
@@ -78,7 +75,6 @@ const ProjectsSection: React.FC = () => {
       image: foodImg,
       tags: ['PHP', 'API', 'CSS3', 'HTML5'],
       githubUrl: 'https://github.com/raian-khan/Online-Food-Order-with-PHP-and-MySQL',
-      demoUrl: '#',
     },
     {
       title: 'Portfolio Website',
@@ -87,7 +83,6 @@ const ProjectsSection: React.FC = () => {
       image: portfolioImg,
       tags: ['React', 'TypeScript', 'TailwindCSS'],
       githubUrl: 'https://github.com/raian-khan/my-portfolio',
-      demoUrl: '#',
     },
   ];
 
@@ -127,28 +122,16 @@ const ProjectsSection: React.FC = () => {
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex space-x-4">
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white text-gray-800 rounded-full"
-                      whileHover={{ y: -5 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white text-gray-800 rounded-full"
-                      whileHover={{ y: -5 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaExternalLinkAlt className="text-xl" />
-                    </motion.a>
-                  </div>
+                  <motion.a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white text-gray-800 rounded-full"
+                    whileHover={{ y: -5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub className="text-xl" />
+                  </motion.a>
                 </div>
               </div>
               <div className="p-6">
