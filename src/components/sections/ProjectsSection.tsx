@@ -3,6 +3,12 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
+// Import project images from assets folder
+import bdhpImg from '../../assets/bdhp.jpg';
+import potatoImg from '../../assets/potato.jpg';
+import foodImg from '../../assets/food.jpeg';
+import portfolioImg from '../../assets/portfolio.png';
+
 interface Project {
   title: string;
   description: string;
@@ -48,35 +54,39 @@ const ProjectsSection: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product search, cart functionality, and payment processing.',
-      image: 'https://via.placeholder.com/600x400',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-      githubUrl: '#',
+      title: 'House Price Prediction in Bangladesh',
+      description:
+        'Predicting house prices in Bangladesh using machine learning models. GradientBoostingRegressor and RandomForestRegressor performed best.',
+      image: bdhpImg,
+      tags: ['Python', 'Machine Learning Models', 'TensorFlow', 'Data Analysis'],
+      githubUrl: 'https://github.com/raian-khan/BD-home-prices',
       demoUrl: '#',
     },
     {
-      title: 'Task Management App',
-      description: 'A Kanban-style task management application that allows users to create, assign, and track tasks across different stages of completion.',
-      image: 'https://via.placeholder.com/600x400',
-      tags: ['React', 'TypeScript', 'Redux', 'Firebase'],
-      githubUrl: '#',
+      title: 'Tomato Disease Classification',
+      description:
+        'Classifying tomato diseases using a Convolutional Neural Network (CNN). Dataset sourced from Kaggle with 10 disease classes.',
+      image: potatoImg,
+      tags: ['Python', 'CNN', 'TensorFlow', 'Keras'],
+      githubUrl: 'https://github.com/raian-khan/tomato-disease-CNN',
       demoUrl: '#',
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A weather application that displays current conditions and forecasts for any location. Features include dynamic backgrounds based on weather conditions.',
-      image: 'https://via.placeholder.com/600x400',
-      tags: ['JavaScript', 'API', 'CSS3', 'HTML5'],
-      githubUrl: '#',
+      title: 'FoodOrdery',
+      description:
+        'A food ordering website built with HTML, CSS, and PHP where customers can place and track orders, with an admin panel for management.',
+      image: foodImg,
+      tags: ['PHP', 'API', 'CSS3', 'HTML5'],
+      githubUrl: 'https://github.com/raian-khan/Online-Food-Order-with-PHP-and-MySQL',
       demoUrl: '#',
     },
     {
       title: 'Portfolio Website',
-      description: 'A responsive portfolio website built with React and TailwindCSS showcasing projects and skills.',
-      image: 'https://via.placeholder.com/600x400',
+      description:
+        'A responsive portfolio website built with TypeScript, React, and TailwindCSS showcasing projects and skills.',
+      image: portfolioImg,
       tags: ['React', 'TypeScript', 'TailwindCSS'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/raian-khan/my-portfolio',
       demoUrl: '#',
     },
   ];
@@ -93,8 +103,7 @@ const ProjectsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-lg">
-            Here are some of the projects I've worked on. Each project was an opportunity to
-            learn something new and refine my skills.
+            Here are some of the projects I've worked on. Each project was an opportunity to learn something new and refine my skills.
           </p>
         </motion.div>
 
@@ -121,6 +130,8 @@ const ProjectsSection: React.FC = () => {
                   <div className="flex space-x-4">
                     <motion.a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 bg-white text-gray-800 rounded-full"
                       whileHover={{ y: -5 }}
                       whileTap={{ scale: 0.95 }}
@@ -129,6 +140,8 @@ const ProjectsSection: React.FC = () => {
                     </motion.a>
                     <motion.a
                       href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 bg-white text-gray-800 rounded-full"
                       whileHover={{ y: -5 }}
                       whileTap={{ scale: 0.95 }}
@@ -140,9 +153,7 @@ const ProjectsSection: React.FC = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
-                </p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <span

@@ -7,12 +7,18 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaNodeJs,
-  FaFigma,
   FaGitAlt,
-  FaNpm,
   FaDatabase,
 } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiScikitlearn,
+  SiPytorch,
+  SiTensorflow,
+  SiFastapi,
+} from "react-icons/si";
 import { Skill } from "../../types"; // Ensure Skill type is defined in types folder
 
 const SkillsSection: React.FC = () => {
@@ -54,10 +60,13 @@ const SkillsSection: React.FC = () => {
     { name: "Tailwind CSS", level: 85, icon: <SiTailwindcss />, color: "#38B2AC" },
     { name: "Next.js", level: 80, icon: <SiNextdotjs />, color: "#000000" },
     { name: "Node.js", level: 85, icon: <FaNodeJs />, color: "#68A063" },
-    { name: "Figma", level: 75, icon: <FaFigma />, color: "#F24E1E" },
     { name: "Git", level: 85, icon: <FaGitAlt />, color: "#F05032" },
-    { name: "NPM", level: 75, icon: <FaNpm />, color: "#CB3837" },
     { name: "Databases", level: 80, icon: <FaDatabase />, color: "#4DB33D" },
+    { name: "Data Structures & Algorithms", level: 90, icon: "📊", color: "#FF6F00" },
+    { name: "scikit-learn", level: 80, icon: <SiScikitlearn />, color: "#F7931E" },
+    { name: "PyTorch", level: 80, icon: <SiPytorch />, color: "#EE4C2C" },
+    { name: "TensorFlow", level: 80, icon: <SiTensorflow />, color: "#FF6F00" },
+    { name: "FastAPI", level: 75, icon: <SiFastapi />, color: "#009688" },
   ];
 
   return (
