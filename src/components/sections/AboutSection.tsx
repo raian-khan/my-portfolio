@@ -93,12 +93,12 @@ const AboutSection: React.FC = () => {
               >
                 Hire Me
               </motion.a>
-              <motion.a                
-                href="/cv.pdf"
+              <motion.a
+                href={`${import.meta.env.BASE_URL}cv.pdf`}  // Make sure your cv.pdf is in the public directory
                 download
                 className="bg-primary text-white px-4 py-2 rounded"
               >
-                Download CV                            
+                Download CV
               </motion.a>
             </div>
           </motion.div>
