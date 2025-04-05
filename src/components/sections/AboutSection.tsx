@@ -93,14 +93,12 @@ const AboutSection: React.FC = () => {
               >
                 Hire Me
               </motion.a>
-              <motion.a
-                href="/cv.pdf" // Corrected CV download path
-                download="CV_Raian.pdf"
-                className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <motion.a                
+                href="/cv.pdf"
+                download
+                className="bg-primary text-white px-4 py-2 rounded"
               >
-                Download CV
+                Download CV                            
               </motion.a>
             </div>
           </motion.div>
