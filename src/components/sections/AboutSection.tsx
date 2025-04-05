@@ -93,15 +93,17 @@ const AboutSection: React.FC = () => {
               >
                 Hire Me
               </motion.a>
-              <motion.a
-                href="/cv_raian.pdf"  // Direct path to the public folder
+              <motion.a 
+                href={`${process.env.PUBLIC_URL}/cv_raian.pdf`} 
                 download
-                className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                className="px-6 py-3 bg-primary text-white rounded-full hover:bg-blue-600 transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Download CV
               </motion.a>
+
+
             </div>
           </motion.div>
 
