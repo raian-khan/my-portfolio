@@ -76,7 +76,7 @@ const AboutSection: React.FC = () => {
             <h3 className="text-2xl font-bold">Who I Am</h3>
             <p>
               I am a dedicated software engineer with passionate about building scalable web applications.
-              My expertise lies in full-stack development with modern frameworks based on differnt languages.
+              My expertise lies in full-stack development with modern frameworks based on different languages.
               I am seeking an opportunity to apply my skills professionally and grow as a software engineer.
             </p>
             <p>
@@ -94,9 +94,11 @@ const AboutSection: React.FC = () => {
                 Hire Me
               </motion.a>
               <motion.a
-                href={`${import.meta.env.BASE_URL}cv.pdf`}  // Make sure your cv.pdf is in the public directory
+                href="/cv.pdf"  // Direct path to the public folder
                 download
-                className="bg-primary text-white px-4 py-2 rounded"
+                className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Download CV
               </motion.a>

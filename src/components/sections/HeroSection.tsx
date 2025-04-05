@@ -113,7 +113,7 @@ const HeroSection: React.FC = () => {
             </motion.a>
             <motion.a 
               href="#contact" 
-              className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+              className="px-6 py-3 bg-primary text-white rounded-full hover:bg-blue-600 transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
