@@ -94,7 +94,7 @@ const AboutSection: React.FC = () => {
                 Hire Me
               </motion.a>
               <motion.a
-                href="/cv.pdf"  // Direct path to the public folder
+                href="/cv_raian.pdf"  // Direct path to the public folder
                 download
                 className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
